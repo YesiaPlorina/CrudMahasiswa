@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">CRUDMahasiswa</string>
     <string name="action_settings">Settings</string>
+    <string name="nama">nama</string>
+    <string name="nim">nim</string>
+    <string name="jurusan">jur</string>
+    <string name="jur">jurusan</string>
+    <string name="nimm">nimm</string>
+    <string name="name">namee</string>
+    <string name="jrsn">jrsn</string>
+    <string name="u">Update</string>
 </resources>

@@ -8,22 +8,37 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "BASE_URL", '"http://192.168.60.71/mahasiswa_server/index.php/Server/"'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:design:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //add Library networking
+    //retrofit & gson converter(dari google)>> klik git hub -> retrofit-converter -> gson (last version samakan di atas)
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    // butter knife (dari google)
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    // app-> klik kanan->open mudule seting -> dependences -> add
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
 }
